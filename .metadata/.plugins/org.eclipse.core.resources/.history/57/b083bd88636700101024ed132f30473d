@@ -1,0 +1,33 @@
+package sub3;
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+/*
+ * 역질렬화(Deserialize)
+ */
+
+public class DeserializeTest {
+	
+	String path = "C:\\Users\\GGG\\Desktop\\apple.data";
+
+	
+	
+	try {
+		// 역직렬화를 위한 기본스트림과 보조스트림 생성
+		FileInputStream fis = new FileInputStream(path);
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		
+		
+		
+	}catch (Exception e) {
+		e.printStackTrace();
+	}
+	
+	
+	
+	
+	}
+	
+	
+}

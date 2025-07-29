@@ -1,0 +1,21 @@
+package sub1;
+
+public class Apple2 {
+	
+	private String country;
+	private int price;
+	
+	public Apple2(String country, int price) {
+		super();
+		this.country = country;
+		this.price = price;
+	}
+	
+	@Override
+	public String toString() {
+		return "Apple [country=" + country + ", price=" + price + "]";
+	}
+	
+
+
+}

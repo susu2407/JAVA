@@ -1,0 +1,64 @@
+package sub4;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+/*
+ * 날짜 : 2025/07/22
+ * 이름 : 이수연
+ * 내용 : 자바 Map 실습
+ */
+
+public class MapTest {
+	
+	public static void main(String[] args) {
+		
+		// Map 생성
+		Map<Character, String> map = new HashMap();		
+		
+		// Map 데이터 추가
+		map.put('A', "Apple");
+		map.put('B', "Banana");
+		map.put('C', "Cherry");
+		
+		System.out.println(map);		
+		
+		// Map 크기
+		System.out.println("Map : " + map.size());		
+		
+		// Map 데이터 출력
+		System.out.println("Map의 A 키값 : " + map.get('A'));
+		System.out.println("Map의 B 키값 : " + map.get('B'));
+		System.out.println("Map의 C 키값 : " + map.get('C'));
+		
+		// Map 반복문
+		Set<Character> keySet = map.keySet();
+		Iterator<Character> it = keySet.iterator();
+		while(it.hasNext()) {
+			//System.out.println(it.next() + " = " + map.get(keySet));
+			System.out.println(it.next());
+		}
+		
+		for(char key : map.keySet()) {
+			System.out.println(map.get(key));
+		}
+		
+		
+		
+		// Map 과 List 응용
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

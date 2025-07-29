@@ -1,0 +1,16 @@
+package p139;
+
+public class foreachEx {
+	enum Week {
+		월, 화, 수, 목, 금, 토, 일
+	}
+	
+	public static void main(String[] args) {
+		String names[] = { "사과", "배", "바나나", "체리", "딸기", "포도"};
+	}
+	
+	int sum = 0;
+	// 아래 for-each에서 k는 n[0], n[1], ..., n[4]로 반복
+	
+
+}
