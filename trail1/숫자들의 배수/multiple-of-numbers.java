@@ -15,11 +15,11 @@ public class Main {
             System.out.print(arr[i] + " ");
 
             if (arr[i] % 5 == 0) {
-                if (arr[i] == N * 2)
+                if (arr[i] == N * 2) {
                     break;
-            } else {
-                if (arr[i] / (N * 5) == 2)
+                } else if (arr[i] / (N * 5 ) == 2) {
                     break;
+                }
             }
         }
     }
