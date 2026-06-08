@@ -8,12 +8,14 @@ public class Main {
         int N = sc.nextInt();
         int M = sc.nextInt();
 
+        int[] arr = new int[N];
+
         int count = 0;
 
         for (int i = 0; i < N; i++) {
-            int a = sc.nextInt();
+            arr[i] = sc.nextInt();
 
-            if (a == M) {
+            if (arr[i] == M) {
                 count++;
             }
         }
