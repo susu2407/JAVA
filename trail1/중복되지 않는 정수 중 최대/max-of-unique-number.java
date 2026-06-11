@@ -8,7 +8,7 @@ public class Main {
         int N = sc.nextInt();
         int[] arr = new int[N];
 
-        int[] count = new int[1000];
+        int[] count = new int[1001];
 
         int maxVal = -1;
 
