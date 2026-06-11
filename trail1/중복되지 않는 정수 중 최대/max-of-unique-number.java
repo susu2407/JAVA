@@ -20,7 +20,7 @@ public class Main {
         for (int i = 0; i < N; i++) {
             int currentVal = arr[i];
 
-            if (count[currentVal] == 1 && arr[i] > maxVal) {
+            if (count[currentVal] == 1 && currentVal > maxVal) {
                 maxVal = arr[i];
             }
             
