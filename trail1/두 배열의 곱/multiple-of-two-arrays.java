@@ -9,12 +9,14 @@ public class Main {
         int[][] arr2dA = new int[3][3];
         int[][] arr2dB = new int[3][3];
 
-        int num = 0;
-
          for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                arr2dA[i][j] = ++num;
-                arr2dB[i][j] = num + 1;
+                arr2dA[i][j] = sc.nextInt();
+            }
+         }
+         for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                arr2dB[i][j] = sc.nextInt();
             }
          }
 
