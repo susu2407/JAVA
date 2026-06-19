@@ -12,8 +12,6 @@ public class Main {
     
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                arr2d[i][j] = sc.nextInt();
-
                 System.out.print(arr2d[i][j] + " ");
             }
             System.out.println();
