@@ -11,7 +11,6 @@ public class Main {
         int[][] arr2d = new int[N][M];
 
         int num = 1;
-        int count = 0;
 
         /* 규칙 파악...
         5 X 6 일 때..
