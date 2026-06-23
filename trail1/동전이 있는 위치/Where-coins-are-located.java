@@ -20,11 +20,7 @@ public class Main {
 
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                if (arr2d[i][j] == 1) {
-                    System.out.print("1 ");
-                } else {
-                    System.out.print("0 ");
-                }
+                System.out.print(arr2d[i][j] + " ");
             }
             System.out.println();
         }
