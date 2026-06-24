@@ -2,29 +2,47 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Side Note (다른 제출자 코드 학습)
-        // 배열과 반복문을 활용
+        // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        String[] arr = new String[3];
+        String str1 = sc.next();
+        String str2 = sc.next();
+        String str3 = sc.next();
 
-        int min = 20;
-        int max = 0;
+        int maxLen = 0;
+        int minLen = 0;
 
-        for(int i = 0; i < 3; i++){
-            arr[i] = sc.next();
+        if (str1.length() > str2.length()) {
 
-            if(min > arr[i].length()){
-                min = arr[i].length();
+            if (str1.length() > str3.length()) {
+                maxLen = str1.length();
+                
+                if (str2.length() > str3.length()) {
+                    minLen = str3.length();     // ( 1 , 2, 3 )
+                } else {
+                    minLen = str2.length();     // ( 1, 3, 2 )
+                }
+
+            } else {
+                maxLen = str3.length();
+                minLen = str2.length();         // ( 3, 1, 2 )              
+            } 
+
+        } else {
+            if (str2.length() > str3.length()) {
+                maxLen = str2.length();
+
+                if (str1.length() > str3.length()) {
+                    minLen = str3.length();     // ( 2, 1, 3 )
+                } else {
+                    minLen = str1.length();     // ( 2, 3, 1 )
+                }
+            } else {
+                maxLen = str3.length();
+                minLen = str1.length();         // ( 3, 2, 1 )
             }
-
-            if(max < arr[i].length()){
-                max = arr[i].length();
-            }
-
         }
 
-        System.out.print(max - min);
-        
+        System.out.println(maxLen - minLen);
     }
 }
