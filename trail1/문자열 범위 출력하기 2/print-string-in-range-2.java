@@ -10,6 +10,10 @@ public class Main {
 
         int n = sc.nextInt();
 
+        if (n > len) {
+            n = len;
+        }
+
         for (int i = len - 1; i >= len - n; i--) {
             System.out.print(str.charAt(i));
         }
