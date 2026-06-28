@@ -7,9 +7,9 @@ public class Main {
 
         String str = sc.next();
 
-        for (int i = 0; i < str.length(); i++) {
-            if ( (str.length() - 1 - i) % 2 == 1 ) {
-                System.out.print(str.charAt(str.length() - 1 - i));
+        for (int i = str.length() -1; i >= 0; i--) {
+            if (i % 2 == 1 ) {
+                System.out.print(str.charAt(i));
             }
         }
     }
