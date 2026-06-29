@@ -28,22 +28,29 @@ public class Main {
         //     }
         // }
 
-    // ver.3
-        for (int i = 0; i < len - 1; i++) {
-            if (str.contains("ee")) {
-                exists1 = true;
-            } else if (str.contains("ab")) {
-                exists2 = true;
-            }
-        }
+        
+        // // 출력 1
+        // if (exists1 == true) {
+        //     System.out.print("Yes ");
+        // } else {
+        //     System.out.print("No ");
+        // }
 
-        if (exists1 == true) {
+        // // 출력 2
+        // if (exists2 == true) {
+        //     System.out.println("Yes");
+        // } else {
+        //     System.out.println("No");
+        // }
+
+    // ver.3
+        if (str.contains("ee")) {
             System.out.print("Yes ");
         } else {
             System.out.print("No ");
         }
 
-        if (exists2 == true) {
+        if (str.contains("ab")) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
