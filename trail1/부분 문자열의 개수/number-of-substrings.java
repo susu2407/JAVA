@@ -8,12 +8,9 @@ public class Main {
         String A = sc.next();
         String B = sc.next();
 
-        int lenA = A.length();
-        int lenB = B.length();
-
         int count = 0;
 
-        for (int i = 0; i < lenA - 1; i++) {
+        for (int i = 0; i < A.length() - 1; i++) {
 
             if (A.substring(i, i + 2).equals(B)) {
                 count++;
