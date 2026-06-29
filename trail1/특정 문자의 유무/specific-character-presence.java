@@ -10,6 +10,7 @@ public class Main {
         boolean exists1 = false;
         boolean exists2 = false;
 
+    // ver.1
         // for (int i = 0; i < len - 1; i++) {
         //     if (str.charAt(i) == 'e' && str.charAt(i + 1) == 'e') {
         //         exists1 = true;
@@ -18,10 +19,20 @@ public class Main {
         //     }
         // }
 
+    // ver.2
+        // for (int i = 0; i < len - 1; i++) {
+        //     if (str.substring(i, i + 2).equals("ee")) {
+        //         exists1 = true;
+        //     } else if (str.substring(i, i + 2).equals("ab")) {
+        //         exists2 = true;
+        //     }
+        // }
+
+    // ver.3
         for (int i = 0; i < len - 1; i++) {
-            if (str.substring(i, i + 2).equals("ee")) {
+            if (str.contains("ee")) {
                 exists1 = true;
-            } else if (str.substring(i, i + 2).equals("ab")) {
+            } else if (str.contains("ab")) {
                 exists2 = true;
             }
         }
