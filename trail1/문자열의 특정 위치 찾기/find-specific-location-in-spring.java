@@ -8,16 +8,18 @@ public class Main {
         String str = sc.next();
         char c = sc.next().charAt(0);
 
-        int len = str.length();
+        // int len = str.length();
 
-        int startIdx = -1;
+        // int startIdx = -1;
 
-        for (int i = 0; i < len; i++) {
-            if (str.charAt(i) == c) {
-                startIdx = i;
-                break;
-            }
-        }
+        // for (int i = 0; i < len; i++) {
+        //     if (str.charAt(i) == c) {
+        //         startIdx = i;
+        //         break;
+        //     }
+        // }
+
+        int startIdx = str.indexOf(c);
 
         if (startIdx != -1) {
             System.out.println(startIdx);
