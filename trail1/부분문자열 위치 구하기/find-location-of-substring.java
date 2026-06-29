@@ -13,7 +13,7 @@ public class Main {
 
         int startIdx = -1;
 
-        for (int i = 0; i < lenA - 1; i++) {
+        for (int i = 0; i < lenA - lenB + 1; i++) {
             boolean allSame = true;
             
             for (int j = 0; j < lenB; j++) {
