@@ -27,7 +27,8 @@ public class Main {
                     for (int j = 0; j < len; j++) {
                         reverse += s.charAt(len - 1 - j);
                     }
-                    System.out.println(reverse);
+                    s = reverse;
+                    System.out.println(s);
                     break;
             }
         }
