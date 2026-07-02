@@ -23,11 +23,10 @@ public class Main {
                     System.out.println(s);
                     break;
                 case 3:
-                    String reverse = "";
-                    for (int j = 0; j < len; j++) {
-                        reverse += s.charAt(len - 1 - j);
-                    }
-                    s = reverse;
+                    StringBuilder sb = new StringBuilder(s);    // 불변인 String을 수정가능한 StringBuilder로 수정
+
+                    s = sb.reverse().toString();    // 문자열(s)을 뒤집고(reverse) 다지 String으로 변경
+
                     System.out.println(s);
                     break;
             }
