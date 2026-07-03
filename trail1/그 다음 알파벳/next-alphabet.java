@@ -13,7 +13,7 @@ public class Main {
             // System.out.println((char)b);
 
             // ver.2
-            char c = (char) ((int)a + 1);
+            char c = (char) (a + 1);
             System.out.println(c);
         } else {
             System.out.println('a');
