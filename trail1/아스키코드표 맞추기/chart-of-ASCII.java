@@ -5,12 +5,12 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int[] arr = new int[5];
+        char[] arr = new char[5];
 
         for (int i = 0; i < 5; i++) {
-            arr[i] = sc.nextInt();
+            arr[i] = (char)sc.nextInt();
 
-            System.out.print((char)arr[i] + " ");
+            System.out.print(arr[i] + " ");
         }
     }
 }
