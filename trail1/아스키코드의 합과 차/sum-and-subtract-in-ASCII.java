@@ -5,8 +5,8 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        char a = sc.next();
-        char b = sc.next();
+        char a = sc.next().charAt(0);
+        char b = sc.next().charAt(0);
 
         int sum = (int)a + (int)b;
         int dif = 0;
