@@ -18,8 +18,10 @@ public class Main {
         int num = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            if ('0' <= str.charAt(i) && str.charAt(i) <= '9') {
-                num = num * 10 + (int)(str.charAt(i) - '0');
+            char c = str.charAt(i);
+            
+            if ('0' <= c && c <= '9') {
+                num = num * 10 + (c - '0');
             }
         }
 
