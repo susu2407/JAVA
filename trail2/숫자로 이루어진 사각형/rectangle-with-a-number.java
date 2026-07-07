@@ -7,6 +7,11 @@ public class Main {
         int n = sc.nextInt();
 
         // Please write your code here.
+        printSquare(n);
+    }
+
+    public static void printSquare(int n) {
+
         int[][] arr2rd = new int[n][n];
 
         int num = 0;
@@ -25,5 +30,7 @@ public class Main {
             }
             System.out.println();
         }
+
+
     }
 }
