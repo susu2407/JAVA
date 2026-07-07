@@ -12,7 +12,7 @@ public class Main {
 
         for (int i = 0; i < A.length(); i++) {
 
-            A = A.substring(1) + A.substring(0, 1);     // A를 우측으로 한 칸 밀기
+            A = A.substring(A.length() - 1) + A.substring(0, A.length() - 1);     // A를 우측으로 한 칸 밀기
                 
             if (A.equals(B)) {  // A와 B가 같아지는 순간
                 N = i + 1;      // A를 민 횟수
