@@ -12,16 +12,16 @@ public class Main {
 
     public static void printSquare(int n) {
 
-        int num = 0;
+        int num = 1;
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (++num % 10 == 0) {
-                    num = 1;
-                } else {
-                    num = num % 10;
-                }
                 System.out.print(num + " ");
+
+                num++;
+
+                if (num == 10)
+                    num = 1;
             }
             System.out.println();
         }
