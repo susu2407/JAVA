@@ -8,7 +8,7 @@ public class Main {
          String A = sc.next();
          String B = sc.next();
 
-         int N = -1;
+         int N = -1;    // 불가능일 때 -1
 
         for (int i = 0; i < A.length(); i++) {
 
