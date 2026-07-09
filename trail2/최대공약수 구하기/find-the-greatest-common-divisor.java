@@ -10,14 +10,17 @@ public class Main {
         // Please write your code here.-------------------------
 
         // 최대공약수 구하기 : 유클리드 호제법 활용
-        // gcd(n, m);
+        // gcdEuclidean(n, m);
 
         // 최대공약수 구하기 : 소인수분해 활용
-        gcdPrime(n, m);
+        gcdPrimeFactorization(n, m);
+
+        // 해설 : 약수검사
+        // gcdBruteForce(n, m);
     }
 
     // 유클리드 호제법 ver. ------------------------------------
-    public static void gcd(int a, int b) {
+    public static void gcdEuclidean(int a, int b) {
         /* 유클리드 호제법 :
             두 수의 최대공약수는,
             큰 수와 작은 수의 최대공약수와 
@@ -44,7 +47,7 @@ public class Main {
     }
 
     // 소인수분해 활용 ver. -----------------------------------
-    public static void gcdPrime(int a, int b) {
+    public static void gcdPrimeFactorization(int a, int b) {
         // 소인수 구하기
         List<Integer> factorsA = factorize(a);
         List<Integer> factorsB = factorize(b);
@@ -99,7 +102,17 @@ public class Main {
                 div++;
             }
         }
-
         return factors;
+    }
+
+    // 코드트리 해설: 약수 검사(완전탐색) ver. ---------------------------
+    public static void gcdBruteForce (int n, int m) {
+        int gcd = 0;
+        for(int i = 1; i <= Math.min(n, m); i++) {
+            if(n % i == 0 && m % i == 0)
+                gcd = i;
+        }
+    
+        System.out.print(gcd);
     }
 }
