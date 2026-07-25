@@ -11,24 +11,36 @@ public class Main {
         int cnt = 0;
 
         for (int i = A; i <= B; i++) {
-            if (isPrime(i)) {
-                if (isEvenDigitSum(i)) {
-                    cnt++;
-                }
-            }
+            if (isMatchNum(i)) cnt++;
         }
 
         System.out.println(cnt);
     }
 
+    // 두 조건의 만족 여부를 반환하는 함수
+    public static boolean isMatchNum(int n) {
+        if (isPrime(n) && isEvenDigitSum(n)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    // 해당 숫자가 소수인지 여부를 반환하는 함수
     public static boolean isPrime(int n) {
-        for(int i = 2; i < n; i++)
+        if (n == 1) {
+            return false;
+        }
+
+        for(int i = 2; i < n; i++) {
             if(n % i == 0)
                 return false;
+        }
 
         return true;
     }
 
+    // 자릿수의 합이 짝수인지 여부를 반환하는 함수
     public static boolean isEvenDigitSum(int n) {
         int sum = 0;
 
@@ -39,5 +51,4 @@ public class Main {
 
         return sum % 2 == 0;
     }
-
 }
