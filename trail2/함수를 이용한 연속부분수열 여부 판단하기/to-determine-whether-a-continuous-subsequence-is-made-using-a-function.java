@@ -5,6 +5,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
+        // 변수 선언 및 입력;
         int A = sc.nextInt();
         int B = sc.nextInt();
 
@@ -30,20 +31,22 @@ public class Main {
         
         for (int i = 0; i <= totalRounds; i++) {
             
-            if (arrA[i] != arrB[0]) {
+            if (arrA[i] != arrB[0])
                 continue;
-            }
 
-            boolean same = true;
-
-            for (int j = 0; j < arrB.length; j++) {
-                if (arrA[i + j] != arrB[j]) {
-                    same = false;
-                    break;
-                }
-            }
-            if (same) return true;
+            if (isSame(arrA, arrB, i))  // 함수 분리
+                return true;
         }
         return false;
+    }
+
+    public static boolean isSame(int[] arrA, int[] arrB, int i) {
+        for (int j = 0; j < arrB.length; j++) {
+            if (arrA[i + j] != arrB[j]) {
+                return false;
+            }
+        }
+        
+        return true;
     }
 }
