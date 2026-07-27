@@ -33,13 +33,10 @@ public class Main {
             if (arrA[i] != arrB[0]) {
                 continue;
             }
-            System.out.println("i= " + i + ", arrA[i]= " + arrA[i]);    // 디버그 확인용
 
             boolean same = true;
 
             for (int j = 0; j < arrB.length; j++) {
-                System.out.println("j= " + j +", arrB[j]= " + arrB[j]); // 디버그 확인용
-
                 if (arrA[i + j] != arrB[j]) {
                     same = false;
                     break;
