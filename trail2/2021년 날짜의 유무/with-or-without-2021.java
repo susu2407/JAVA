@@ -17,6 +17,9 @@ public class Main {
 
     // 2021년의 날짜 중 M월 D일이 존재하면 "Yes", 존재하지 않는다면 "No"를 출력하는 프로그램
     public static boolean is2021MonthDay(int m, int d) {
+
+        if (m > 12 || d > 31)
+            return false;
         
         if (m == 2) {
             if (d <= 28)
