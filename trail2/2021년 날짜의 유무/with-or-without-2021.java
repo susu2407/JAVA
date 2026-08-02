@@ -8,33 +8,38 @@ public class Main {
         int M = sc.nextInt();
         int D = sc.nextInt();
 
-        if (is2021MonthDay(M, D)) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
+        // 2021년의 날짜 중 M월 D일이 존재하면 "Yes", 존재하지 않는다면 "No"를 출력하는 프로그램
+        System.out.println(isValidDate2021(M, D) ? "Yes" : "No");
     }
 
-    // 2021년의 날짜 중 M월 D일이 존재하면 "Yes", 존재하지 않는다면 "No"를 출력하는 프로그램
-    public static boolean is2021MonthDay(int m, int d) {
-
-        if (m > 12 || d > 31)
+    public static boolean isValidDate2021 (int m, int d) {
+        // 달이 1월부터 12월 사이인지 검사
+        if (!isValidMonth(m)) {
             return false;
+        }
         
-        if (m == 2) {
-            if (d <= 28)
-                return true;
+        // 각 월별 유효한 날수인지 검사
+        if (d < 1 || getDaysInMonth(m) < d) {
             return false;
         }
 
-        if (m % 2 == 1) {
-            if (d <= 31) 
-                return true;
-            return false;
-        } else {
-            if (d <= 30)
-                return true;
-            return false;
+        return true;
+
+    }
+
+    public static boolean isValidMonth(int m) {
+        return 1 <= m && m <=12;
+    }
+
+    public static int getDaysInMonth (int m) {  // 각 월의 최대 일수 반환
+        if (m == 2) {
+            return 28;
         }
+
+        if (m == 4 || m == 6 || m == 9 || m == 11) {
+            return 30;
+        }
+
+        return 31;
     }
 }
