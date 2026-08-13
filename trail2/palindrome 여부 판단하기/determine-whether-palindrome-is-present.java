@@ -10,9 +10,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
         // Please write your code here.
-        boolean result = palindrome(input);
-
-        System.out.println(result ? "Yes" : "No");
+        System.out.println(palindrome(input) ? "Yes" : "No");
     }
 
     public static boolean palindrome(String s) {
