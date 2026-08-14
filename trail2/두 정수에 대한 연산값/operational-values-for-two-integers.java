@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
-/*  2026-08-13
-    Java 학습 : 문자열을 인자로 받는 함수
-    palindrome 여부 판단하기
-        palindrome : 회문. 앞에서부터 읽으나 뒤에서부터 읽으나 똑같은 단어나 문장을 뜻함.
+/*  2026-08-14
+    Java 학습 : Call By Value
+    < 두 정수에 대한 연산값 >
 */
 
 class IntWrapper {
