@@ -16,20 +16,13 @@ public class Main {
     public static boolean hasOtherChar(String s) {
         // 2개 이상인지 판단하는 로직
         char[] arr = s.toCharArray();
-        int count = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i; j < arr.length; j++) {
-                if (arr[i] != arr[j]) {
-                    count++;
-                }
+            if (arr[0] != arr[i]) {
+                return true;
             }
         }
 
-        if (count >= 2) {
-            return true;
-        } else {
-            return false;
-        }
+        return false;
     }
 }
