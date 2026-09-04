@@ -4,26 +4,35 @@
 */
 import java.util.Scanner;
 public class Main {
+    static int[] arr;   // getSum()에서도 사용됨므로 전역 변수로 변경
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();   // 원소 개수
         int m = sc.nextInt();   // 질의 개수
-        int[] arr = new int[n];
+
+        arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+
         for (int i = 0; i < m; i++) {
             int a1 = sc.nextInt();
             int a2 = sc.nextInt();
+            
             // Please write your code here.
-            int sum = 0;    // 합을 0으로 초기화
-
-            // a1번째 원소부타 a2번째 원소까지의 
-            for (int j = a1 - 1; j < a2; j++) {
-                sum += arr[j];
-            }
-
-            System.out.println(sum);
+            System.out.println(getSum(a1, a2));
         }
+    }
+
+    public static int getSum(int a1, int a2) {
+        int sum = 0;    // 합을 0으로 초기화
+
+        // a1번째 원소부타 a2번째 원소까지의 
+        for (int j = a1 - 1; j < a2; j++) {
+            sum += arr[j];
+        }
+
+        return sum;
     }
 }
