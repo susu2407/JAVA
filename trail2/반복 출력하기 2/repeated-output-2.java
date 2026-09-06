@@ -8,8 +8,11 @@ public class Main {
     }
 
     public static void printlnHW(int n) {
-        for (int i = 0; i < n; i++) {
-            System.out.println("HelloWorld");
+        if (n == 0) {
+            return;
         }
+
+        printlnHW(n - 1);
+        System.out.println("HelloWorld");
     }
 }
